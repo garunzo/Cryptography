@@ -20,20 +20,20 @@ public class Matrix {
   }
 
   public double determinant() {
-    double a = this.matrix[0][0];
-    double b = this.matrix[0][1];
-    double c = this.matrix[1][0];
-    double d = this.matrix[1][1];
+    double a = matrix[0][0];
+    double b = matrix[0][1];
+    double c = matrix[1][0];
+    double d = matrix[1][1];
     double det = 1 / (a*d - b*c);
     return det;
   }
 
   public Matrix inverseMatrix() {
-    double a = this.matrix[0][0];
-    double b = this.matrix[0][1];
-    double c = this.matrix[1][0];
-    double d = this.matrix[1][1];
-    double det = this.determinant();
+    double a = matrix[0][0];
+    double b = matrix[0][1];
+    double c = matrix[1][0];
+    double d = matrix[1][1];
+    double det = determinant();
 
     Matrix inverse = new Matrix(d*det, -b*det, -c*det, a*det);
     return inverse;
