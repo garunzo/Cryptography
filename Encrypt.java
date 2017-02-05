@@ -14,12 +14,12 @@ public class Encrypt {
     */
     char[] mesg;
 
-    String message = "LUCA IS MY BOY";
+    String message = "MATH IS FUN VERY FUN";
+    if (message.length() % 2 == 1) message+= " ";
     mesg = message.toCharArray();
     int len = message.length();
-    if (len % 2 == 1 ) len++;
-    int[] code = new int[len];
 
+    int[] code = new int[len];
 
     int numberOfPairs = message.length() / 2;
     System.out.println(numberOfPairs);
@@ -46,9 +46,9 @@ public class Encrypt {
     // 12*5 + 21*6 = 60+126 = 186...  12*10 + 21*(-2) = 120 - 42 = 78
     for (int i = 0 ; i < message.length(); i+=2) {
       Pair p = new Pair(code[i], code[i+1]);
-      int codex = vert1.multiply(p);
-      int codey = vert2.multiply(p);
-      System.out.println("Coded: " + codex + ", " + codey);
+      double codex = vert1.multiply(p);
+      double codey = vert2.multiply(p);
+      System.out.println("pairs[" + i/2 + "] = new Pair(" + codex + ", " + codey + ");");
     }
   }
 }

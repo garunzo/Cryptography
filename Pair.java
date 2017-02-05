@@ -1,14 +1,14 @@
 public class Pair {
-  int x;
-  int y;
+  double x;
+  double y;
 
   // The Constructor
-  public Pair(int x1, int y1) {
+  public Pair(double x1, double y1) {
     this.x = x1;
     this.y = y1;
   }
 
-  public int multiply(Pair p) {
+  public double multiply(Pair p) {
     return this.x * p.x + this.y * p.y;
   }
 
@@ -17,6 +17,10 @@ public class Pair {
   }
   public Pair subtract(Pair p) {
     return new Pair(this.x-p.x,this.y-p.y);
+  }
+
+  public String toString() {
+    return "(" + x + ", " + y + ")";
   }
 }
 
