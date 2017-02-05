@@ -19,6 +19,10 @@ public class Pair {
     return new Pair(this.x-p.x,this.y-p.y);
   }
 
+  public Matrix inverseMatrix(Pair v1, Pair v2) {
+    return new Matrix(v1, v2);
+  }
+
   public String toString() {
     return "(" + x + ", " + y + ")";
   }

@@ -68,16 +68,16 @@ public class MatrixCryptography {
     // pairs[3] = new Pair(76.0, 57.0);
     // pairs[4] = new Pair(87.0, 60.0);
     // pairs[5] = new Pair(56.0, 42.0);
-    pairs[0] = new Pair(55.0, 41.0);
-    pairs[1] = new Pair(104.0, 76.0);
-    pairs[2] = new Pair(27.0, 18.0);
-    pairs[3] = new Pair(76.0, 57.0);
-    pairs[4] = new Pair(87.0, 60.0);
-    pairs[5] = new Pair(56.0, 42.0);
-    pairs[6] = new Pair(103.0, 76.0);
-    pairs[7] = new Pair(147.0, 104.0);
-    pairs[8] = new Pair(18.0, 12.0);
-    pairs[9] = new Pair(126.0, 91.0);
+    pairs[0] = new Pair(-22.0, 10.0);
+    pairs[1] = new Pair(-8.0, -4.0);
+    pairs[2] = new Pair(36.0, -27.0);
+    pairs[3] = new Pair(-38.0, 19.0);
+    pairs[4] = new Pair(72.0, -57.0);
+    pairs[5] = new Pair(-28.0, 14.0);
+    pairs[6] = new Pair(-24.0, 7.0);
+    pairs[7] = new Pair(64.0, -57.0);
+    pairs[8] = new Pair(24.0, -18.0);
+    pairs[9] = new Pair(14.0, -21.0);
     //Scanner userInputScanner = new Scanner(System.in);
 
     // System.out.println("How many pairs are there?");

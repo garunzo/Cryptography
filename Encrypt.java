@@ -1,8 +1,11 @@
 public class Encrypt {
 
   public static void main(String[] args) {
-    Pair vert1 = new Pair(4,3);
-    Pair vert2 = new Pair(3,2);
+    Pair vert1 = new Pair(-2,4);
+    Pair vert2 = new Pair(1,-3);
+    Matrix m = new Matrix(vert1, vert2);
+    System.out.println("Encrypt matrix: \n" + m);
+    System.out.println("Decrypt matrix: \n" + m.inverseMatrix());
 
     /*
      *  5  10
