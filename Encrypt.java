@@ -1,8 +1,17 @@
 public class Encrypt {
 
   public static void main(String[] args) {
-    Pair vert1 = new Pair(5,6);
-    Pair vert2 = new Pair(10,-2);
+    Pair vert1 = new Pair(4,3);
+    Pair vert2 = new Pair(3,2);
+
+    /*
+     *  5  10
+     *  6  -2
+     *
+     *      1             1        -2    -6
+     * ------------- = --------
+     *  -10 - (60)       -70       -10   5
+    */
     char[] mesg;
 
     String message = "LUCA IS MY BOY";
@@ -34,7 +43,7 @@ public class Encrypt {
     //   System.out.println("Coded: " + codex + ", " + codey);
     // }
 
-    // 12*5 + 6*21 = 60+126 = 186
+    // 12*5 + 21*6 = 60+126 = 186...  12*10 + 21*(-2) = 120 - 42 = 78
     for (int i = 0 ; i < message.length(); i+=2) {
       Pair p = new Pair(code[i], code[i+1]);
       int codex = vert1.multiply(p);

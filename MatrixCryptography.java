@@ -1,6 +1,17 @@
 import java.util.*;
 import java.io.Console;
 
+/*
+ * MatrixCryptography
+ *
+ * Luca Cotter - Feb 2017
+ *
+ * Attempts to decrypt a message with INTEGERS only.
+ * The inverse of the matrix used to encrypt the message must
+ * be all integers.
+ *
+ */
+ 
 public class MatrixCryptography {
 
   public static void main(String[] args) {
@@ -14,7 +25,7 @@ public class MatrixCryptography {
 
       for (int n = 0; n < numberOfPairs; n++) {
 
-        System.out.println("\nType pair " + (n+1) + ".");
+        System.out.println("Type pair " + (n+1) + ".");
         String xy = userInputScanner.nextLine();
         String[] parts = xy.split(",");
         int x = Integer.parseInt(parts[0]);
@@ -45,7 +56,7 @@ public class MatrixCryptography {
                   worked = false;
                   break;
                 }
-                System.out.println(a + ", " + b + ", " + c + ", " + d);
+                //System.out.println(a + ", " + b + ", " + c + ", " + d);
                 result1 += 64;
                 result2 += 64;
                 char char1 = (result1 == 64) ? (char) 32 : (char) result1;
