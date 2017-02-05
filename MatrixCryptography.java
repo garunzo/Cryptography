@@ -10,8 +10,9 @@ import java.io.Console;
  * The inverse of the matrix used to encrypt the message must
  * be all integers.
  *
+ * Adding some fractions
  */
- 
+
 public class MatrixCryptography {
 
   public static void main(String[] args) {
