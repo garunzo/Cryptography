@@ -54,11 +54,12 @@ public class Encrypt {
       System.out.println("pairs[" + i/2 + "] = new Pair(" + codex + ", " + codey + ");");
     }
 
+    System.out.println(message.length()/2);
     for (int i = 0 ; i < message.length(); i+=2) {
       Pair p = new Pair(code[i], code[i+1]);
       double codex = vert1.multiply(p);
       double codey = vert2.multiply(p);
-      System.out.println(codex + ", " + codey);
+      System.out.println(codex + "," + codey);
     }
   }
 }
