@@ -7,7 +7,7 @@ import java.io.FileReader;
  *
  * Luca Cotter - Feb 2017
  *
- * Attempts to decrypt a message with INTEGERS only.
+ * Attempts to decrypt a message 
  * The inverse of the matrix used to encrypt the message must
  * be in the range set in the program.
  *
