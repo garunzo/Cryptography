@@ -1,8 +1,8 @@
 public class Encrypt {
 
   public static void main(String[] args) {
-    Pair vert1 = new Pair(-2,4);
-    Pair vert2 = new Pair(1,-3);
+    Pair vert1 = new Pair(1,2);
+    Pair vert2 = new Pair(3,4);
     Matrix m = new Matrix(vert1, vert2);
     System.out.println("Encrypt matrix: \n" + m);
     System.out.println("Decrypt matrix: \n" + m.inverseMatrix());
@@ -17,7 +17,7 @@ public class Encrypt {
     */
     char[] mesg;
 
-    String message = "MATH IS FUN VERY FUN";
+    String message = "SPONGEBOB SQUAREPANTS AND PATRICK STAR ARE THE COOLEST KIDS IN TOWN";
     if (message.length() % 2 == 1) message+= " ";
     mesg = message.toCharArray();
     int len = message.length();

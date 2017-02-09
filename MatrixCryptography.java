@@ -15,7 +15,7 @@ import java.io.FileReader;
 
 public class MatrixCryptography {
 
-  static double tolerance = 0.01;
+  static double tolerance = 0.0001;
 
   public static boolean isNotLetter(double a) {
     return a < 0 || a > 26 ;
@@ -69,9 +69,6 @@ public class MatrixCryptography {
 
     Scanner userInputScanner = new Scanner(new FileReader(args[0]));
 
-    // System.out.println("How many pairs are there?");
-
-
     numberOfPairs = Integer.parseInt(userInputScanner.nextLine());
 
     pairs = new Pair[numberOfPairs];
@@ -86,14 +83,13 @@ public class MatrixCryptography {
     }
 
     int a, b, c, d;
-    int num2;
-    double dFactor = 100.0; // powers of 10 for fractions; 10 is 1
-    int scope = 20;
-    int numMatches;
+    double dFactor = 100.0; // powers of 10 for fractions; 100 is 2
+    int range = 2; // range... -range to range
+    int numMatches; // count number of times legal results occur
     String old_sequence = "";
     do {
       numMatches = 0;
-      int begin = -scope*((int) dFactor), end = scope*((int) dFactor);
+      int begin = -range*((int) dFactor), end = range*((int) dFactor);
       for(a = begin; a <= end;  a++) {
         for(c = begin; c <= end; c++) {
           Pair first = new Pair(a/dFactor,c/dFactor); // vertical 1
@@ -103,7 +99,8 @@ public class MatrixCryptography {
                 Pair second = new Pair(b/dFactor, d/dFactor); // vertical 2
                 String sequence = buildSequence(pairs, first, second);
                 if (sequence != "" && (!sequence.equals(old_sequence)) ) {
-                  System.out.println(sequence + " : Vertical_1 : " + first + " Vertical_2 : " + second);
+                  System.out.println(sequence + " : Vertical_1 : " +
+                                     first + " Vertical_2 : " + second);
                   old_sequence = sequence; // save sequence to eliminate dupes
                   numMatches += 1;
                 }
@@ -112,7 +109,7 @@ public class MatrixCryptography {
           }
         }
       }
-      dFactor = dFactor*100.0;
-    } while (numMatches < 2);
+      dFactor = dFactor*100.0; // increase resolution (i.e. # of decimal places)
+   } while (numMatches < 2); // if only 1 legal result, repeat with greater resolution
   }
 }
